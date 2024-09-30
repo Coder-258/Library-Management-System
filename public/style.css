@@ -1,0 +1,164 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+.navbar {
+    background-color: #333; /* Dark background for the navbar */
+    padding: 10px 0;
+}
+.nav_ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.nav_li {
+    color: #fff;
+    margin: 0 15px;
+    font-size: 18px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.nav_li:hover {
+    color: #f4f4f9;
+}
+/* Background Image */
+.bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Place the image behind other elements */
+}
+/* Content Section */
+.content-div {
+    text-align: center;
+    padding: 100px 20px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    margin: 0 auto;
+    max-width: 800px;
+    border-radius: 8px;
+}
+.content-head {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.content-para {
+    font-size: 18px;
+    line-height: 1.6;
+}
+/* Form and Button Styles */
+.logIn, .signIn {
+    display: none; /* Initially hide forms */
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background with some transparency */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 20px auto;
+}
+.input {
+    width: calc(100% - 22px); /* Full width with padding adjustment */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.btn {
+    background-color: #007bff; /* Primary blue */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+#loginDiv {
+    display: block; /* Show login form by default */
+}
+#signDiv {
+    display: none; /* Hide sign-in form initially */
+}
+/* Create Account Button */
+#create_account {
+    display: block;
+    margin: 20px auto;
+    background-color: #28a745; /* Green color for create account button */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#create_account:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+.signIn{
+    display: none;
+}
+.main{
+    display: flex;
+    justify-content: center;
+}
+.options {
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-top: 125px;
+}
+/* Heading */
+.options h3 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Button Container */
+.btn-div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Buttons */
+.buttons {
+    background-color: #007bff; /* Primary Blue */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+/* Hover Effect */
+.buttons:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Active Button Effect */
+.buttons:active {
+    background-color: #004085; /* Even darker blue on click */
+}

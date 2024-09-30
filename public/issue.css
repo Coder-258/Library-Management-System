@@ -1,0 +1,157 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.nav_ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav_li {
+    margin: 0 15px;
+}
+
+.nav_li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav_li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Ensure container takes up available space */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Book List Styles */
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.book-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.book-cover {
+    width: 70%;
+    height: 180px; /* Increased height for better visibility */
+    object-fit: cover; /* Ensures image covers container without distortion */
+}
+
+.book-info {
+    padding: 15px;
+}
+
+.book-title {
+    font-size: 20px;
+    margin: 0;
+    color: #333;
+}
+
+.book-author, .book-genre, .book-year {
+    margin: 5px 0;
+}
+
+.book-description {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.issue-btns {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+#bookId{
+    display: none;
+}
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.6s;
+    z-index: 1000;
+}
+
+.toast.success {
+    background-color: #28a745; /* Green for success */
+}
+
+.toast.error {
+    background-color: #dc3545; /* Red for error */
+}
+
+.toast.show {
+    opacity: 1;
+    animation: fadeInOut 8s forwards;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+.issue-btns:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Pushes footer to the bottom */
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System - Issue Books</title>
+    <link rel="stylesheet" href="/issue.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="nav_ul">
+                <li class="nav_li"><a href="/">Home</a></li>
+                <li class="nav_li"><a href="/about">About Us</a></li>
+                <li class="nav_li"><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <h1>Books to be returned</h1>
+        <div class="book-list">
+            <% if (returnBooks && returnBooks.length > 0) { %>
+                <% returnBooks.forEach(function(returnBook) { %>
+                <div class="book-item">
+                    <img src="<%= returnBook.imageUrl %>" alt="<%= returnBook.title %>" class="book-cover">
+                    <div class="book-info">
+                        <h2 class="book-title"><%= returnBook.title %></h2>
+                        <p class="book-author">Author: <%= returnBook.author %></p>
+                        <p class="book-genre">Genre: <%= returnBook.genre %></p>
+                        <p class="book-year">Published: <%= returnBook.year %></p>
+                        <p class="book-description"><%= returnBook.description %></p>
+                        <form action="/returnBook/<%= returnBook._id %>" method="POST" id="form">
+                            <input type="hidden" name="bookId" value="<%= returnBook._id %>">
+                            <button class="issue-btns">Return Book</button>
+                        </form>
+                    </div>
+                </div>
+                <% }); %>
+            <% } else { %>
+                <p>No books to return.</p>
+            <% } %>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Library Management System</p>
+    </footer>
+</body>
+</html>

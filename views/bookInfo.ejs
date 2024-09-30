@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System - Issue Books</title>
+    <link rel="stylesheet" href="/issue.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="nav_ul">
+                <li class="nav_li"><a href="/">Home</a></li>
+                <li class="nav_li"><a href="/about">About Us</a></li>
+                <li class="nav_li"><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <h1>Available Books</h1>
+        <div class="book-list">
+            <% books.forEach(function(book) { %> <!-- Loop through books from the database -->
+            <div class="book-item">
+                <img src="<%= book.imageUrl %>" alt="<%= book.title %>" class="book-cover">
+                <div class="book-info">
+                    <h2 class="book-title"><%= book.title %></h2>
+                    <p class="book-author">Author: <%= book.author %></p>
+                    <p class="book-genre">Genre: <%= book.genre %></p>
+                    <p class="book-year">Published: <%= book.year %></p>
+                    <p class="book-description"><%= book.description %></p>
+                    <form  method="POST" id="form" action="/issueBook/<%= book._id %>">
+                        <input type="hidden" name="email" class="email" id="email">
+                        <button class="issue-btns">Issue Book</button>
+                    </form>
+                </div>
+            </div>
+            <% }); %> <!-- End of loop -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Library Management System</p>
+    </footer>
+   
+</body>
+</html>

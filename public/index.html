@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav_ul">
+            <li class="nav_li">Home</li>
+            <li class="nav_li">About us</li>
+            <li class="nav_li">Contact Us</li>
+        </ul>
+    </nav>
+    <img src="/images/bg.jpg" alt="" class="bg-image">
+    <div class="content-div">
+       <h1 class="content-head">Welcome to Your Virtual Library</h1>
+       <p class="content-para">On our online library, you can view the different types of books available that you can issue. Moreover you can get your complete history of the books you have isssued till date. If you want to return books, you can return that online </p>
+    </div>
+    <div class="logIn" id="loginDiv">
+        <form action="/logIn" method="POST">
+            <input class="input" name="email"type="email" placeholder="Enter your email here" required>
+            <input class="input" name="password"type="password" placeholder="Enter your password here" required>
+            <button class="btn" type="submit">log In</button>
+        </form>
+    </div>
+    <button class="btn" id="create_account">Create Account</button>
+    <div class="logIn signIn" id="signDiv">
+        <form action="/signIn" method="POST">
+            <input class="input" name="email"type="email" placeholder="Enter your email here" required>
+            <input class="input" name="password"type="password" placeholder="Enter your password here" required>
+            <input class="input" name="cPassword"type="password" placeholder="Re-enter your password" required>
+            <button class="btn" type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
